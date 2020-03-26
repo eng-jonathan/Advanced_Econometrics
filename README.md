@@ -2,9 +2,9 @@
 ## Queens College - Econ 387: Advanced Econometrics 
 
 Shortcuts:
-[Homework Python](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_python)
-[Homework R](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_r)
-[Syllabus](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/syllabus)
+[Homework Python](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_python) |
+[Homework R](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_r) |
+[Syllabus](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/syllabus) |
 
 Course Objectives:
 * Introduce students to the computational aspects of econometric analysis using Python and R
