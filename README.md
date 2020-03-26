@@ -1,4 +1,4 @@
-# QC_MATH_342
+# QC_ECON_387
 ## Queens College - Econ 387: Advanced Econometrics 
 
 Shortcuts:
