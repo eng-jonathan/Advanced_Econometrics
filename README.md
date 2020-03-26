@@ -21,5 +21,3 @@ Course Topics:
 * Static panel data models such as one-way and two-way error models
 * Endogenous regressor problem, instrumental variable approach
 * Time series models, forecasting and evaluation of forecasting performance
-
-[Course Syllabus](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/syllabus/syllabus_econ387.pdf)
