@@ -1,0 +1,45 @@
+---
+title: "Homework #4"
+author: "Jonathan Eng"
+output: pdf_document
+date: "March 9, 2020"
+---
+
+```{r}
+#2
+set.seed(37)
+
+#1
+get_b0_b1 = function(x, y){
+  mean_x = sum(x)/length(x)
+  mean_y = sum(y)/length(y)
+  numerator = sum( (x - mean_x) * (y - mean_y) )
+  denominator = sum( (x - mean_x)**2 )
+
+  b1 = numerator / denominator
+  b0 = mean_y - (b1*mean_x)
+  b0_b1 = list(b0, b1)
+
+  b0_b1
+  }
+
+#3, 4
+n = 1000
+x = rnorm(n)
+e = rnorm(n)
+y = 0.5 + (1.8*x) + e
+
+#5
+get_b0_b1(x , y)
+
+#6
+#The estimates for b0 and b1 are not equal ot the true values of 0.5 and 1.8 because of noise (e).  
+
+#7
+e = rnorm(n)
+y = 0.5 + (1.8*x) + e
+
+get_b0_b1(x , y)
+
+#The new estimates are not the same as the initial estimationbecause we obtain new noise values when recalulating e.
+```
