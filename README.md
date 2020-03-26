@@ -2,7 +2,7 @@
 ## Queens College - Econ 387: Advanced Econometrics 
 
 Shortcuts:
-[Hopmework Python](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_python)
+[Homework Python](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_python)
 [Homework R](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_r)
 [Syllabus](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/syllabus)
 
