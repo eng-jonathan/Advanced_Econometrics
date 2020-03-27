@@ -4,7 +4,7 @@
 Shortcuts:
 [Homework Python](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_python) |
 [Homework R](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_r) |
-[Syllabus](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/syllabus) 
+[Syllabus](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/syllabus/syllabus_econ387.pdf) 
 
 Course Objectives:
 * Introduce students to the computational aspects of econometric analysis using Python and R
