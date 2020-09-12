@@ -3,7 +3,7 @@ Shortcuts:
 [Homework Python](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_python) |
 [Homework R](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_r) |
 [Midterm](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/midterm) |
-[Fina](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/final) |
+[Final](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/final) |
 [Syllabus](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/syllabus/syllabus_econ387.pdf) 
 ___
 Course Objectives:
