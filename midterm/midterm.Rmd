@@ -1,0 +1,137 @@
+---
+title: "(Eng) Econ387_Midterm"
+author: "Jonathan Eng"
+output: pdf_document
+date: "April 8, 2020"
+---
+
+```{r}
+library(dplyr)
+library(stargazer)
+library(ggplot2)
+```
+
+
+```{r}
+#Import Final_Sample.csv
+mathData = data.frame(read.csv("Final_sample.csv"))
+```
+
+```{r}
+#Model Math Gender Gap
+#Regress pv1math on female dummy by background country, and save the slope estimates for the female dummy
+model = function(df){
+  y = df$pv1math
+  x = df$female
+  mod = lm(y ~ x)
+  return(mod$coefficients[2])
+  }
+
+ mathGenderGap = mathData %>% 
+    group_by(mathData$background) %>% 
+    group_map( ~ model( .x)) 
+
+mathGenderGap = unlist(mathGenderGap)
+mathGenderGap = unname(mathGenderGap)
+
+```
+
+```{r}
+#Plot Math Gender Gap
+mathData %>%
+  group_by(background) %>%
+  summarise(genderGap = mean(ggi)) %>%
+  ggplot(aes(x = genderGap, y = mathGenderGap)) +
+    xlab("Gender Gap Index") +
+    ylab("Math Gender Gap") +
+    ylim(-100, 50) +
+    xlim(.57, .8) +
+    geom_point(size = 1.5, color = "black") +
+    geom_text(size = 3, color = "black", check_overlap = TRUE, aes(label = background)) +
+    geom_smooth(method = lm, formula = y ~ x, se = FALSE, color = "black")
+```
+
+```{r}
+# Note that in all specifications the dependent variables is pv1math. 
+# You need to include year fixed effects (λt), 
+# ancestry country fixed effects (λj), 
+# host country fixed effects (λk), 
+# and the interaction of female dummy with host country fixed effects (female_i × λk)
+
+#Model 1: Required variables above
+model1 = lm(pv1math ~ female + I(ggi*female) + age + I(age*female) + diffgrade + I(diffgrade*female) + factor(year) + #(λt) 
+                      factor(background) + #(λj)
+                      factor(country) + (female*factor(country)), #(λk)
+                      
+                      data = mathData, weights = stweight)
+model1$coefficients = model1$coefficients[2:7]
+#model1$coefficients
+
+#Model 2: Includes LogGDP [to model1]
+model2 = lm(pv1math ~ female + I(ggi*female) + age + I(age*female) + diffgrade + I(diffgrade*female) + factor(year) + #(λt) 
+                      factor(background) + #(λj)
+                      factor(country) + (female*factor(country)) + #(λk)
+                      I(lgdppc*female), #(GDP * Female)
+            
+                      data = mathData, weights = stweight)
+model2$coefficients = model2$coefficients[c(2:7,53)]
+#model2$coefficients
+
+#Model 3: Removed ancestry country fixed effects (λj) [from model 2], includes ggi and lgdppc
+model3 = lm(pv1math ~ female + I(ggi*female) + age + I(age*female) + diffgrade + I(diffgrade*female) + factor(year) +#(λt) 
+                      factor(country) + female*factor(country) + #(λk)
+                      I(lgdppc*female) + #(GDP * Female)
+                      ggi + lgdppc, #Gender Gap Index & Log per capital GDP
+            
+                      data = mathData, weights = stweight)
+model3$coefficients = model3$coefficients[c(2:7,19:21)]
+#model3$coefficients
+
+#Model 4: Included Parental Educaation [to model 2]
+model4 = lm(pv1math ~ female + I(ggi*female) + age + I(age*female) + diffgrade + I(diffgrade*female) + factor(year) + #(λt) 
+                      factor(background) + #(λj)
+                      factor(country) + (female*factor(country)) + #(λk)
+                      I(lgdppc*female) + #(GDP * Female)
+                      fisced + I(fisced*female) + misced + I(misced*female), #Parent Education
+            
+                      data = mathData, weights = stweight)
+model4$coefficients = model4$coefficients[c(2:7,53:57)]
+#model4$coefficients
+
+#Model 5: Included Home Possessions and Parental Work [to model 4]
+model5 = lm(pv1math ~ female + I(ggi*female) + age + I(age*female) + diffgrade + I(diffgrade*female) + factor(year) + #(λt) 
+                      factor(background) + #(λj)
+                      factor(country) + female*factor(country) + #(λk)
+                      I(lgdppc*female) + #(GDP * Female)
+                      fisced + I(fisced*female) + misced + I(misced*female) + #Parent Education
+                      dadwork + I(dadwork*female) + momwork + I(momwork*female) + #Parent Work
+                      homepos + I(homepos*female), #Home Possessions
+            
+                      data = mathData, weights = stweight)
+model5$coefficients = model5$coefficients[c(2:7,53:63)]
+#model5$coefficients
+
+#Model 6: Included School Influence [to model 5]
+model6 = lm(pv1math ~ female + I(ggi*female) + age + I(age*female) + diffgrade + I(diffgrade*female) + factor(year) + #(λt) 
+                      factor(background) + #(λj)
+                      factor(country) + female*factor(country) + #(λk)
+                      I(lgdppc*female) + #(GDP * Female)
+                      fisced + I(fisced*female) + misced + I(misced*female) + #Parent Education
+                      dadwork + I(dadwork*female) + momwork + I(momwork*female) + #Parent Work                      
+                      homepos + I(homepos*female) + #Home Possessions
+                      pcgirls + I(pcgirls*female) + private + I(private*female) + metropolis + I(metropolis*female), #School Influence
+            
+                      data = mathData, weights = stweight)
+model6$coefficients = model6$coefficients[c(2:7,52:68)]
+#model6$coefficients
+```
+
+```{r, warning = FALSE}
+stargazer(model1, model2, model3, model4, model5, model6, title = "Table 1 - Gender Equality and the Math Gender Gap", type = "text", 
+          covariate.labels= c("Female", "GGI x Female", "Age of Student", "Age x Female", "Diff. Grade", "Diff. Grade x Female", 
+                              "GDP x Female", "GGI", "GDP", 
+                              "Dad educ.", "Dad educ. x Female", "Mom educ.", "Mom educ. x Female", 
+                              "Dad work", "Dad work x Female", "Mom work", "Mom work x Female",
+                              "Home possessions", "Home possessions x Female",
+                              "Proportion of Girls at School", "Prop. girls x Female", "Private school", "Private school x Female", "School is in a metropolis", "School is in a Metro x Female"))
+```
