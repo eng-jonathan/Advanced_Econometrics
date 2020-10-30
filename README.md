@@ -2,6 +2,8 @@
 Shortcuts:
 [Homework Python](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_python) |
 [Homework R](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_r) |
+[Midterm](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/midterm) |
+[Final](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/final) |
 [Syllabus](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/syllabus/syllabus_econ387.pdf) 
 ___
 Course Objectives:
@@ -19,3 +21,12 @@ Course Topics:
 * Static panel data models such as one-way and two-way error models
 * Endogenous regressor problem, instrumental variable approach
 * Time series models, forecasting and evaluation of forecasting performance
+___
+[Midterm](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/midterm)
+* [Assignment](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/midterm_prompt.pdf) 
+* [Submission](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/midterm.Rmd)
+* The midterm requires you to replicate the main results of Nollenberger, Rodr´ıguez-Planas and Sevilla (2016) [*The Math Gender Gap*](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/the_math_gender_gap.pdf) using statistical modeling
+___
+[Final](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/final)
+* [Assignment](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/final/final_prompt.pdf) 
+* [Submission](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/final/final.Rmd)
