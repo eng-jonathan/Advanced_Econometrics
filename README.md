@@ -24,7 +24,7 @@ ___
 [Midterm](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/midterm)
 * [Assignment](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/midterm_prompt.pdf) 
 * [Submission](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/midterm.Rmd)
-* The midterm requires you to replicate the main results of Nollenberger, Rodr´ıguez-Planas and Sevilla (2016) [*The Math Gender Gap*](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/the_math_gender_gap.pdf) using statistical modeling
+* Replicate the main results of Nollenberger, Rodr´ıguez-Planas and Sevilla (2016) [*The Math Gender Gap*](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/the_math_gender_gap.pdf) using statistical modeling
 * Highlight(s)
 ![](images/midterm_multiregression_output.jpg)
 ___
