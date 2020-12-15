@@ -5,14 +5,6 @@ Shortcuts:
 [Midterm](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/midterm) |
 [Syllabus](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/syllabus/syllabus_econ387.pdf) 
 ___
-
-[Midterm](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/midterm)
-* [Assignment](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/midterm_prompt.pdf) 
-* [Submission](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/midterm.Rmd)
-* The midterm requires you to replicate the main results of Nollenberger, Rodr´ıguez-Planas and Sevilla (2016) [*The Math Gender Gap*](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/the_math_gender_gap.pdf) using statistical modeling
-* Highlight(s)
-![](images/midterm_multiregression_output.jpg)
-___
 Course Objectives:
 * Introduce students to the computational aspects of econometric analysis using Python and R
 * Continue building on the regression analysis of the first semester, and introduce a number of important extensions
@@ -29,4 +21,10 @@ Course Topics:
 * Endogenous regressor problem, instrumental variable approach
 * Time series models, forecasting and evaluation of forecasting performance
 ___
-
+[Midterm](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/midterm)
+* [Assignment](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/midterm_prompt.pdf) 
+* [Submission](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/midterm.Rmd)
+* The midterm requires you to replicate the main results of Nollenberger, Rodr´ıguez-Planas and Sevilla (2016) [*The Math Gender Gap*](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/blob/master/midterm/the_math_gender_gap.pdf) using statistical modeling
+* Highlight(s)
+![](images/midterm_multiregression_output.jpg)
+___
