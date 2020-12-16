@@ -1,4 +1,4 @@
-## Queens College - Econ 387: Advanced Econometrics 
+## Advanced Econometrics 
 [Homework Python](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_python) |
 [Homework R](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/homework_r) |
 [Midterm](https://github.com/eng-jonathan/QC_ECON_387_AdvancedEconometrics/tree/master/midterm) |
