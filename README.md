@@ -12,7 +12,7 @@ ___
 * Highlight(s)
 ![](images/midterm_multiregression_output.jpg)
 ___
-Objectives:
+Course Objectives:
 * Introduce students to the computational aspects of econometric analysis using Python and R
 * Continue building on the regression analysis of the first semester, and introduce a number of important extensions
 
